@@ -21,13 +21,13 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        inputs.Player.Move.started += ctx => StartTouch(ctx);
     }
 
-    //private void StartTouch()
-    //{
-    //    Debug.Log("Touch me");
-    //}
+    private void StartTouch(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("Touch me");
+    }
 
     private void OnEnable()
     {
